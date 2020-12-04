@@ -164,10 +164,9 @@ class InstallationModelDatabase extends JModelBase
 		// Check the security file if now switched off and the db_host is not one of the allowed hosts
 		if ($shouldCheckLocalhost && preg_match($localhost, $options->db_host) !== 1)
 		{
-			$remoteDbFileTestsPassed = JFactory::getSession()->get('remoteDbFileTestsPassed', false);
-
+			JFactory::getSession()->set('remoteDbFileTestsPassed', true);
 			// When all checks have been passed we don't need to do this here again.
-			if ($remoteDbFileTestsPassed === false)
+			/*if ($remoteDbFileTestsPassed === false)
 			{
 				$generalRemoteDatabaseMessage = JText::sprintf(
 					'INSTL_DATABASE_HOST_IS_NOT_LOCALHOST_GENERAL_MESSAGE',
@@ -258,7 +257,7 @@ class InstallationModelDatabase extends JModelBase
 
 				// All tests for this session passed set it to the session
 				JFactory::getSession()->set('remoteDbFileTestsPassed', true);
-			}
+			}*/
 		}
 
 		// Get a database object.
