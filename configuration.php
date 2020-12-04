@@ -38,7 +38,7 @@ class JConfig
 	public $frontediting = '1';
 
 	/* Database Settings */
-	public $dbtype = 'postgres';               // Normally mysqli
+	public $dbtype = 'mysqli';               // Normally mysqli
 	public $host = 'ec2-23-20-205-19.compute-1.amazonaws.com';              // This is normally set to localhost
 	public $user = 'cvsqykynfnuvzt';                       // DB username
 	public $password = 'd4502940292cf9913976ad77f4dece78bb183ae966a9a6a5ec543bd7344717bd';                   // DB password
